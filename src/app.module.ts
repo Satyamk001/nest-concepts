@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
+import { DestinationsModule } from './destinations/destinations.module';
 // root module of the application which imports other modules, declares controllers and providers
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     PrismaModule,
     AuthModule,
+    DestinationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
