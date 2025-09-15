@@ -10,6 +10,7 @@ export class DestinationsService {
 
   async create(userId : number, createDestinationDto: CreateDestinationDto) {
     return this.prismaService.destination.create({
+      // @ts-ignore
       data : {
         ...createDestinationDto,
         userId,
